@@ -72,3 +72,158 @@ function moo(animal) {
 
 moo("cow");
 moo("cat");
+
+//E. Driver's Ed
+//Make a variable that holds a person's age; be semantic
+//Write code that will print out "Here are the keys!", if the age is 16 years or older, or, if the age is younger than 16, a message should print "Sorry, you're too young."
+
+
+function drive(age) {
+    if (age >= 16)
+    console.log("Here are the keys!");
+    else {
+        console.log("Sorry, you're too young.");  
+    }
+}
+
+drive(20);
+drive(13);
+
+
+//II. Loops
+
+//A. The basics
+//Write a loop that will print out all the numbers from 0 to 10, inclusive
+//Write a loop that will print out all the numbers from 10 up to and including 400
+//Write a loop that will print out every third number starting with 12 and going no higher than 4000
+
+for (let i = 0;i <= 10; i++) {
+    console.log(i);
+}
+
+for (let i = 10;i <= 400; i++) {
+    console.log(i);
+}
+
+for (let i = 12;i <= 4001; i+= 3) {
+    console.log(i);
+}
+
+//B. Get even
+//Print out the numbers that are within the range of 1 - 100
+//Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+
+for (let i = 1;i <= 100; i++) {
+    if (i % 2 == 0) {
+        console.log(i + "<-- is an even number");
+    }
+    else {
+        console.log(i);
+    }
+}
+
+//C. Give me Five
+//For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+
+for (let i = 1;i <= 100; i++) {
+    if (i % 15 == 0 ) {
+        console.log(`I found a ${i}. High five!` + `I found a ${i}. Three is a crowd`);
+        
+    }
+    else if (i % 5 == 0) {
+        console.log(`I found a ${i}. High five!`);
+    }
+    else if (i % 3 == 0) {
+        console.log(`I found a ${i}. Three is a crowd`);
+
+    }
+   
+}
+
+//D. Savings account
+//Write code that will save the sum of all the numbers between 1 - 10 to a variable called bank_account.
+//Check your work! Your bank_account should have $55 in it.
+
+//You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+//Check your work! Your bank_account should have $10,100 in it.
+let bank_account = 0;
+
+for (let i = 1; i <= 10; i++) {
+    bank_account += i;
+}
+
+console.log(bank_account);
+
+//You got a bonus! Your pay is now doubled each week. Write code that will save the sum of all the numbers between 1 - 100 multiplied by 2.
+//Check your work! Your bank_account should have $10,100 in it.
+
+let bank_account2 = 0;
+
+for (let i = 1; i <= 100; i++) {
+    bank_account2 += i *2;
+}
+
+console.log(bank_account2);
+
+//III. Arrays & Control flow
+
+//A. Talk about it:
+//What are the things in an array called?
+  // Elements
+//Do Arrays guarantee those things will be in order?
+    // Yes
+//What real-life thing could you model with an array?
+    // Movie Collection
+
+//B. Easy Does It
+//Create an array that contains three quotes and store it in a variable called quotes
+
+let quotes = ["What's you favorite Scary Movie", "Not the Moma", "I'm Iornman"];
+
+//C. Accessing elements
+//Given the following array const randomThings = [1, 10, "Hello", true]
+const randomThings = [1, 10, "Hello", true]
+//How do you access the 1st element in the array
+console.log(randomThings[0]);
+//Change the value of "Hello"to "World"
+randomThings.splice(2, 1, "World");
+//Check the value of the array to make sure it updated the array. How? Why, yes! console.log();
+console.log(randomThings);
+
+//D. Change values
+//Given the following array const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
+
+//What would you write to access the 3rd element of the array?
+console.log(ourClass[2]);
+//Change the value of "Github" to "Octocat"
+ourClass.splice(4, 1, "Octocat");
+console.log(ourClass);
+
+//Add a new element, "Cloud City" to the array
+ourClass.push("Cloud City")
+console.log(ourClass);
+
+//E. Mix It Up
+//Note: You don't really need .splice()for these. You could use it, but there are simpler array methods that are more appropriate.
+
+//Given the following array: const myArray = [5, 10, 500, 20]
+const myArray = [5, 10, 500, 20]
+
+//Add the string "Aegon"to the end of the array. Add another string of your choice to the end of the array.
+
+myArray.push("Aegon");
+myArray.push("Roll Tide");
+//Remove the 5from the beginning of the array.
+myArray.shift();
+console.log(myArray);
+//Add the string "Bob Marley"to the beginning of the array.
+myArray.unshift("Bob Marley")
+//Remove the string of your choice from the end of the array.
+myArray.pop();
+//Reverse this array using Array.prototype.reverse(). Did you mutate the array? What does mutate mean? Did the .reverse()method return anything?
+
+myArray.reverse();
+console.log(myArray.reverse());
+console.log(myArray);
+// Yes it did mutate my array
